@@ -260,6 +260,13 @@ pre.code {
   transition: all 0.3s ease;
 }
 
+.alert-text {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
+  color: var(--color-text);
+}
+
 .no-scroll {
   overflow: hidden;
 }

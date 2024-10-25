@@ -1,8 +1,37 @@
-{% extends "base.html" %}
-{% load static %}
-{% block title %}Реквизиты{% endblock %}
-
-{% block content %}
-    <h1>Тестовая страница</h1>
-    <img src="{% static 'img/logo.svg' %}" alt="Тест">
+{% extends "base.html" %} {% load static %}
+{% block title %} {{ title }} {% endblock %} 
+{% block content %} 
+{% include "components/header-page.html" with title=title %}
+<section class="requisites-section" id="requisites">
+  <div class="container requisites-section__container">
+    <div class="requisites-section__rowContent">
+      <div class="requisites-section__context">
+        {% if cashs %} 
+        <ul class="requisites-section__list">
+          {% for cash in cashs %}
+          <li class="requisites-section__list-item">
+            <div class="requisites-section__list-card requisites-card">
+              <div class="requisites-card__wrapper">
+                <h3 class="requisites-card__bankName">{{ cash.bank }}</h3>
+                <div class="requisites-card__bankCode">
+                  <div aria-label="Код карты" class="requisites-card__bankCode-text" data-target-copy>{{ cash.number }}</div>
+                  <button data-tooltip="Скопировано" aria-label="Копировать код карты" class="requisites-card__bankCode-copy" data-control-copy>
+                    <i class="ri-file-copy-line"></i>
+                  </button>
+                </div>
+                <div class="requisites-card__holder">{{ cash.owner }}</div>
+              </div>
+            </div>
+          </li>
+          {% endfor %} 
+        </ul>
+        {% else %}
+            <p class="requisites-section__alert alert-text">
+                Этот раздел редактируется, приносим свои извинения!
+            </p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock %}

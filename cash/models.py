@@ -12,4 +12,4 @@ class Cash(models.Model):
         verbose_name_plural = "Реквизиты"
 
     def __str__(self) -> str:
-        return self.owner - self.bank
+        return f"{self.owner} - {self.bank}"
