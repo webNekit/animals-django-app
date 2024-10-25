@@ -1,0 +1,54 @@
+<div aria-label="Модальное окно" class="help-modal" data-modal>
+    <div class="help-modal__wrapper" data-modal-wrapper>
+        <div class="help-modal__rowTop">
+            <div class="container help-modal__rowTop-container">
+                <button aria-label="Закрыть модальное окно" class="help-modal__close" data-toggler-modal>
+                    <i class="ri-close-fill"></i>
+                </button>
+            </div>
+        </div>
+        <div class="help-modal__rowBottom">
+            <div class="container help-modal__rowBottom-container">
+                <div class="help-modal__content">
+                    <h3 class="help-modal__content-title">Оставьте заявку и&#160;мы&#160;свяжемся с&#160;вами
+                    </h3>
+                    <form action="#" class="help-modal__form" method="post">
+                        <div class="help-modal__form-group">
+                            <div class="help-modal__form-item">
+                                <label for="first-name" class="help-modal__form-label">Ваше имя</label>
+                                <input aria-label="Ваше имя" type="text" name="first-name" id="first-name"
+                                    class="help-modal__form-input" placeholder="Сергей" required />
+                            </div>
+                            <div class="help-modal__form-item">
+                                <label for="last-name" class="help-modal__form-label">Ваша фамилия</label>
+                                <input aria-label="Ваша фамилия" type="text" name="last-name" id="last-name"
+                                    class="help-modal__form-input" placeholder="Иванов" required />
+                            </div>
+                        </div>
+                        <div class="help-modal__form-group">
+                            <div class="help-modal__form-item">
+                                <label for="phone" class="help-modal__form-label">Ваш номер телефона</label>
+                                <input aria-label="Ваш номер телефона" type="text" name="phone" id="phone"
+                                    class="help-modal__form-input" placeholder="+7(000)000-00-00"
+                                    data-input-phone required />
+                            </div>
+                            <div class="help-modal__form-item">
+                                <label for="email" class="help-modal__form-label">Ваш адрес эл.почты</label>
+                                <input aria-label="Ваш адрес эл.почты" type="emall" name="email" id="email"
+                                    class="help-modal__form-input" placeholder="help@example.ru" required />
+                            </div>
+                        </div>
+                        <div class="help-modal__form-group">
+                            <div class="help-modal__form-item">
+                                <button aria-label="Отправить заявку" type="submit"
+                                    class="help-modal__form-button button button--primary">Отправить заявку
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="overlay" id="overlay" data-overlay></div>

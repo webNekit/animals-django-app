@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} Помощь животным {% endblock %}</title>
+    <meta name="title" content="" />
+    <meta name="description" content="Краткое описание страницы, которое будет отображаться в результатах поиска." />
+    <meta name="keywords" content="ключевое слово 1, ключевое слово 2, ключевое слово 3" />
+    <meta name="author" content="Ваше имя или название компании" />
+    <meta name="theme-color" content="#317EFB" />
+    <meta property="og:title" content="Заголовок страницы" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/page.html" />
+    <meta property="og:image" content="https://example.com/image.jpg" />
+    <meta property="og:description" content="Описание страницы, которое будет отображаться в социальных сетях." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Заголовок страницы" />
+    <meta name="twitter:description" content="Описание страницы" />
+    <meta name="twitter:image" content="https://example.com/image.jpg" />
+    <meta name="language" content="ru" />
+    <meta name="robots" content="index, nofollow" />
+    {% include "includes/styles.html" %}
+</head>
+
+<body class="website" id="website">
+    <div class="website__layout">
+        {% include "includes/header.html" %}
+        <main class="website__main main" id="main">
+            <div class="main__wrapper">
+                {% block content %}{% endblock %}
+            </div>
+        </main>
+        {% include "includes/modal.html" %}
+        {% include "includes/footer.html" %}
+    </div>
+    {% include "includes/scripts.html" %}
+</body>
+
+</html>
