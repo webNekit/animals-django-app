@@ -15,7 +15,7 @@
                                 <a href="#!" class="reference-card__linkTitle">
                                     <h3 class="reference-card__name">{{ reference.title }}</h3>
                                 </a>
-                                <p class="reference-card__text">{{ reference.small_text|slice:":120" }}</p>
+                                <p class="reference-card__text">{{ reference.small_text|slice:":120" }}...</p>
                                 <a aria-label="Перейти на страницу" href="{% url 'reference:page_detail' reference.slug %}" class="reference-card__link-detail">Подробнее</a>
                             </div>
                         </div>

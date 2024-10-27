@@ -16,7 +16,7 @@
                                         <img loading="lazy" src="{% static 'img/document.svg' %}" alt="Тип файла" class="report-card__icon-docs">
                                     </div>
                                     <h3 class="report-card__name">{{ report.name }}</h3>
-                                    <a aria-label="Скачать отчет" href="{{ report.file }}" download="" class="report-card__download-link">
+                                    <a aria-label="Скачать отчет" href="{{ report.file.url }}" download="" class="report-card__download-link">
                                         <span class="report-card__download-text">Скачать отчет</span>
                                         <span class="report-card__download-icon"><i class="ri-download-line"></i></span>
                                     </a>

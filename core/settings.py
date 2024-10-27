@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ckeditor',
+    'pet.apps.PetConfig',
     'report.apps.ReportConfig',
     'cash.apps.CashConfig',
     'reference.apps.ReferenceConfig',

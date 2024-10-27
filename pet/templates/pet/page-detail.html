@@ -1,0 +1,47 @@
+{% extends "base.html" %} {% load static %}
+{% block title %}{{ title }}{% endblock %} 
+{%block meta_title %}{{ title }}{% endblock meta_title %}
+{% block meta_text %}{{ meta_text }}{% endblock meta_text %}
+{% block meta_keywords %}{{ meta_keywords }}{% endblock meta_keywords %}
+{% block content %} 
+{% comment %} {% include "components/header-page.html" with title=title %} {% endcomment %}
+<section class="single-pets" id="sigle-pets">
+    <div class="container single-pets__container">
+        <div class="single-pets__row single-pets__row--top">
+            <div class="single-pets__banner">
+                <img loading="lazy" src="{{ pet.images.all.0.image.url }}" alt="Изображение собаки" class="single-pets__banner-img">
+            </div>
+            <div class="single-pets__info">
+                <div class="single-pets__info-wrapper">
+                    <h2 class="single-pets__info-name">{{ pet.name }} - {{ pet.category.name }}</h2>
+                    <ul class="single-pets__info-list">
+                        <li class="single-pets__info-item">
+                            <div class="single-pets__info-text">{{ pet.breed.name }},</div>
+                        </li>
+                        <li class="single-pets__info-item">
+                            <div class="single-pets__info-text">{{ pet.age }},</div>
+                        </li>
+                        <li class="single-pets__info-item">
+                            <div class="single-pets__info-text">Телефон для связи <a href="tel:{{ pet.contact }}">{{ pet.contact }}</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="single-pets__row single-pets__row--bottom">
+            <div class="single-pets__content">
+                {{ pet.content|safe }}
+            </div>
+            <ul class="single-pets__gallery">
+                {% for item in pet.images.all %}
+                    <li class="single-pets__gallery-item">
+                        <a aria-label="Открыть изображение" data-fslightbox="pets-gallery" href="{{ item.image.url }}" class="single-pets__gallery-link">
+                            <img loading="lazy" src="{{ item.image.url }}" alt="Юки" class="single-pets__gallery-img">
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "base.html" %} {% load static %}
+{% block title %}{{ title }}{% endblock %} 
+{%block meta_title %}{{ title }}{% endblock meta_title %}
+{% block meta_text %}{{ meta_text }}{% endblock meta_text %}
+{% block meta_keywords %}{{ meta_keywords }}{% endblock meta_keywords %}
+{% block content %} 
+{% include "components/header-page.html" with title=title %}
+<section class="pets-section" id="pets">
+    <div class="container pets-section__container">
+        <div class="pets-section__rowContent">
+            <div class="pets-section__context">
+                {% if pets %}
+                <ul class="pets-section__list">
+                    {% for pet in pets %}
+                    <li class="pets-section__item">
+                        <div data-pet-tag="#{{ pet.category.name }}" class="pets-section__card pet-card">
+                            <div class="pet-card__wrapper">
+                                <div class="pet-card__preview">
+                                    <img loading="lazy" src="{{ pet.images.all.0.image.url }}" alt="{{ pet.breed.name }} {{ pet.name }}" class="pet-card__preview-img pet-card__preview-img--primary">
+                                    <img loading="lazy" src="{{ pet.images.all.1.image.url }}" alt="{{ pet.breed.name }} {{ pet.name }}" class="pet-card__preview-img pet-card__preview-img--secondary">
+                                </div>
+                                <div class="pet-card__content">
+                                    <div class="pet-card__detail">
+                                        <h3 class="pet-card__name"><a aria-label="Перейти на страницу" href="{% url 'pet:page_detail' pet.slug %}" class="pet-card__link">{{ pet.name }}</a></h3>
+                                        <ul class="pet-card__info">
+                                            <li class="pet-card__info-item">
+                                                <div class="pet-card__info-value">{{ pet.breed.name }}</div>
+                                            </li>
+                                            <li class="pet-card__info-item">
+                                                <div class="pet-card__info-value">{{ pet.age }}</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                    <p class="requisites-section__alert alert-text">Этот раздел редактируется, приносим свои извинения!</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
