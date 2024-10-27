@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% load static %}
+{% block title %} {{ reference.title }} {% endblock %} 
+{% block content %} 
+<section class="single-article" id="single-article">
+    <div class="container single-article__container">
+        <div class="single-article__wrapper">
+            <div class="single-article__head">
+                <h1 class="single-article__head-title">{{ reference.title }}</h1>
+                <div class="single-article__content" style="text-align: center; margin-block-start: 16px;">
+                    <p>{{ reference.small_text }}</p>
+                </div>
+            </div>
+            <div class="single-article__banner">
+                <img loading="lazy" src="{{ reference.image.url }}" alt="{{ reference.title }}" class="single-article__banner-img">
+            </div>
+            <div class="single-article__content">
+                {{ reference.long_text|safe }}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -9,7 +9,7 @@ class Cash(models.Model):
 
     class Meta:
         verbose_name = "Реквизит"
-        verbose_name_plural = "Реквизиты"
+        verbose_name_plural = "Список реквизитов"
 
     def __str__(self) -> str:
         return f"{self.owner} - {self.bank}"

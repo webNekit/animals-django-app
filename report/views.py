@@ -3,7 +3,8 @@ from .models import Report
 
 # Create your views here.
 def report_list(request):
-    report = Report.objects.all()
+    reports = Report.objects.filter(is_active=True)
     return render(request, "report/page-index.html", {
-        'report': report
+        'reports': reports,
+        'title': 'Отчеты',  
     })

@@ -1,5 +1,37 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% load static %}
 {% block title %}Отчеты{% endblock title %}
 {% block content %}
-    привет мир!
+{% include "components/header-page.html" with title=title %}
+<section class="reports-section" id="reports">
+    <div class="container reports-section__container">
+        <div class="reports-section__rowContent">
+            <div class="reports-section__contextRow">
+                {% if reports %}
+                <ul class="reports-section__list">
+                    {% for report in reports %}
+                        <li class="reports-section__list-item">
+                            <div class="reports-section__list-card report-card">
+                                <div class="report-card__wrapper">
+                                    <div class="report-card__icon">
+                                        <img loading="lazy" src="{% static 'img/document.svg' %}" alt="Тип файла" class="report-card__icon-docs">
+                                    </div>
+                                    <h3 class="report-card__name">{{ report.name }}</h3>
+                                    <a aria-label="Скачать отчет" href="{{ report.file }}" download="" class="report-card__download-link">
+                                        <span class="report-card__download-text">Скачать отчет</span>
+                                        <span class="report-card__download-icon"><i class="ri-download-line"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p class="reports-section__alert alert-text">
+                    Этот раздел редактируется, приносим свои извинения!
+                </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock content %}

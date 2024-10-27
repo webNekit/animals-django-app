@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% load static %}
+{% block title %} {{ title }} {% endblock %} 
+{% block content %} 
+{% include "components/header-page.html" with title=title %}
+<section class="reference-section" id="reference-section">
+    <div class="container reference-section__container">
+        <div class="reference-section__rowContent">
+            <div class="reference-section__context">
+                {% if references %}
+                <ul class="reference-section__list">
+                    {% for reference in references %}
+                    <li class="reference-section__list-item">
+                        <div class="reference-section__list-card reference-card">
+                            <div class="reference-card__wrapper">
+                                <a href="#!" class="reference-card__linkTitle">
+                                    <h3 class="reference-card__name">{{ reference.title }}</h3>
+                                </a>
+                                <p class="reference-card__text">{{ reference.small_text|slice:":120" }}</p>
+                                <a aria-label="Перейти на страницу" href="{% url 'reference:page_detail' reference.slug %}" class="reference-card__link-detail">Подробнее</a>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                    <p class="requisites-section__alert alert-text">Этот раздел редактируется, приносим свои извинения!</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

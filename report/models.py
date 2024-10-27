@@ -12,4 +12,4 @@ class Report(models.Model):
         verbose_name_plural = "Отчет"
 
     def __str__(self) -> str:
-        return self.name - self.created_at
+        return self.name

@@ -1,3 +1,4 @@
+{% load static %}
 <header class="website__header header" id="header">
     <div class="container header__container">
         <div class="header__row header__row--top">
@@ -12,7 +13,7 @@
             <div class="header__col header__col--center">
                 <div class="header__logo logo">
                     <a href="./index.html" title="На главную" class="logo__link">
-                        <img width="90" height="90" src="./img/logo.svg" alt="" class="logo__brand">
+                        <img width="90" height="90" src="{% static 'img/logo.svg' %}" alt="" class="logo__brand">
                     </a>
                 </div>
             </div>
@@ -27,7 +28,7 @@
                     <li class="navbar__menu-item"><a aria-selected="Ссылка на страницу питомцы" href="./pets.html" class="navbar__menu-link">Питомцы</a></li>
                     <li class="navbar__menu-item"><a aria-selected="Ссылка на страницу реквизиты" href="{% url 'cash:cash_list' %}" class="navbar__menu-link">Реквизиты</a></li>
                     <li class="navbar__menu-item"><a aria-selected="Ссылка на страницу отчеты" href="{% url 'report:report_list' %}" class="navbar__menu-link">Отчеты</a></li>
-                    <li class="navbar__menu-item"><a aria-selected="Ссылка на страницу справочник" href="./reference.html" class="navbar__menu-link">Справочник</a></li>
+                    <li class="navbar__menu-item"><a aria-selected="Ссылка на страницу справочник" href="{% url 'reference:reference_list' %}" class="navbar__menu-link">Справочник</a></li>
                     <li class="navbar__menu-item"><a aria-selected="Ссылка на страницу новости" href="./articles.html" class="navbar__menu-link">Новости</a></li>
                     <li class="navbar__menu-item"><a aria-selected="Ссылка на страницу контакты" href="./contacts.html" class="navbar__menu-link">Контакты</a></li>
                 </menu>
