@@ -6,7 +6,7 @@
                 <div class="header__phone">
                     <a href="tel:+79692881531" class="header__phone-link">
                         <i class="ri-phone-line"></i>
-                        <span data-type="phone-number" class="header__phone-number" data-phone-number="79692881531"></span>
+                        <span data-type="phone-number" class="header__phone-number" data-phone-number="{{ site_settings.main_phone }}"></span>
                     </a>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                     <li class="navbar__menu-item"><a aria-selected="Ссылка на страницу реквизиты" href="{% url 'cash:cash_list' %}" class="navbar__menu-link">Реквизиты</a></li>
                     <li class="navbar__menu-item"><a aria-selected="Ссылка на страницу отчеты" href="{% url 'report:report_list' %}" class="navbar__menu-link">Отчеты</a></li>
                     <li class="navbar__menu-item"><a aria-selected="Ссылка на страницу справочник" href="{% url 'reference:reference_list' %}" class="navbar__menu-link">Справочник</a></li>
-                    <li class="navbar__menu-item"><a aria-selected="Ссылка на страницу новости" href="./articles.html" class="navbar__menu-link">Новости</a></li>
+                    <li class="navbar__menu-item"><a aria-selected="Ссылка на страницу новости" href="{% url 'article:article_list' %}" class="navbar__menu-link">Новости</a></li>
                     <li class="navbar__menu-item"><a aria-selected="Ссылка на страницу контакты" href="./contacts.html" class="navbar__menu-link">Контакты</a></li>
                 </menu>
             </nav>

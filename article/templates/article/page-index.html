@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% load static %}
+{% block title %}{{ title }}{% endblock %} 
+{%block meta_title %}{{ title }}{% endblock meta_title %}
+{% block meta_text %}{{ meta_text }}{% endblock meta_text %}
+{% block meta_keywords %}{{ meta_keywords }}{% endblock meta_keywords %}
+{% block content %} 
+{% include "components/header-page.html" with title=title %}
+<section class="main__section news" id="news">
+    <div class="container news__container">
+        <div class="news__wrapper">
+            {% include "components/article/article-list.html" with articles=articles %}
+        </div>
+    </div>
+</section>
+{% endblock %}

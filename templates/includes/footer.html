@@ -5,7 +5,7 @@
 			<div class="footer__rowTop">
 				<div class="footer__col footer__col--left">
 					<div class="footer__logo logo">
-						<a href="#!" title="На главную" class="logo__link">
+						<a href="{% url 'main:index' %}" title="На главную" class="logo__link">
 							<img width="90" height="90" src="{% static 'img/logo.svg' %}" alt="" class="logo__brand">
 						</a>
 					</div>
@@ -45,23 +45,22 @@
 					<div class="footer__messanger">
 						<h3 class="footer__messanger-title">Мы в мессенджере</h3>
 						<ul class="footer__messanger-list">
+							{% if site_settings.social_links %}
+							{% for social in site_settings.social_links.all %}
 							<li class="footer__messanger-item">
-								<a aria-label="Перейти в мессенджер" title="whatsapp" href="#!" target="_blank" class="footer__messanger-link">
-									<img loading="lazy" src="./img/tg.jpg" alt="Логотип whatsapp" class="footer__messanger-logo">
+								<a aria-label="Перейти в мессенджер" href="{{ social.url }}" target="_blank" class="footer__messanger-link">
+									<img loading="lazy" src="{{ social.icon.url }}" alt="Логотип whatsapp" class="footer__messanger-logo">
 								</a>
 							</li>
-							<li class="footer__messanger-item">
-								<a aria-label="Перейти в мессенджер" title="whatsapp" href="#!" target="_blank" class="footer__messanger-link">
-									<img loading="lazy" src="./img/tg.jpg" alt="Логотип whatsapp" class="footer__messanger-logo">
-								</a>
-							</li>
+							{% endfor %}
+							{% endif %}
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="footer__rowBottom">
 				<div class="footer__copyright">
-					&copy; Дай лапу! 2024
+					&copy; {{ site_settings.site_name }} 2024
 				</div>
 				<a href="#!" aria-label="Ссылка на разработчика" target="_blank" class="footer__development-link">Дизайн и разработка сайта</a>
 			</div>

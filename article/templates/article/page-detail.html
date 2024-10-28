@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% load static %}
+{% block title %}{{ title }}{% endblock %} 
+{%block meta_title %}{{ title }}{% endblock meta_title %}
+{% block meta_text %}{{ meta_text }}{% endblock meta_text %}
+{% block meta_keywords %}{{ meta_keywords }}{% endblock meta_keywords %}
+{% block content %}
+<section class="single-article" id="single-article">
+    <div class="container single-article__container">
+        <div class="single-article__wrapper">
+            <div class="single-article__head">
+                <h2 class="single-article__head-subtitle">#{{ article.category.name }}</h2>
+                <h1 class="single-article__head-title">{{ article.title }}</h1>
+            </div>
+            <div class="single-article__banner">
+                <img loading="lazy" src="{{ article.image.url }}" alt="{{ article.title }}" class="single-article__banner-img">
+            </div>
+            <div class="single-article__content">
+                {{ article.content|safe }}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -41,9 +41,11 @@ INSTALLED_APPS = [
     'ckeditor',
     'main.apps.MainConfig',
     'pet.apps.PetConfig',
+    'reference.apps.ReferenceConfig',
+    'article.apps.ArticleConfig',
     'report.apps.ReportConfig',
     'cash.apps.CashConfig',
-    'reference.apps.ReferenceConfig',
+    'settings.apps.SettingsConfig',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +71,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'settings.context_processors.site_settings',
             ],
         },
     },
