@@ -1,0 +1,259 @@
+{% extends "base.html" %} {% load static %}
+{% block title %}{{ title }}{% endblock %} 
+{%block meta_title %}{{ title }}{% endblock meta_title %}
+{% block meta_text %}{{ meta_text }}{% endblock meta_text %}
+{% block meta_keywords %}{{ meta_keywords }}{% endblock meta_keywords %}
+{% block content %} 
+<section class="main__section banner" id="banner">
+    <div class="container banner__container">
+        <div class="banner__slider swiper">
+            <div class="banner__slider-wrapper swiper-wrapper">
+                <div class="banner__slider-slide swiper-slide">
+                    <div class="banner__slider-content">
+                        <h2 class="banner__slider-contentTitle">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+                        <p class="banner__slider-contentText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, inventore accusantium dolores illo obcaecati, nemo nesciunt quo, sequi ipsam fuga voluptates explicabo dicta adipisci facilis?</p>
+                        <a href="#!" title="читать подробнее" class="banner__slider-contentLink button button--primary">Читать подробнее</a>
+                    </div>
+                    <div class="banner__slider-preview">
+                        <img loading="lazy" src="https://lipsum.app/640x480/" alt="" class="banner__slider-previewImg">
+                    </div>
+                </div>
+                <div class="banner__slider-slide swiper-slide">
+                    <div class="banner__slider-content">
+                        <h2 class="banner__slider-contentTitle">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+                        <p class="banner__slider-contentText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, inventore accusantium dolores illo obcaecati, nemo nesciunt quo, sequi ipsam fuga voluptates explicabo dicta adipisci facilis?</p>
+                        <a href="#!" title="читать подробнее" class="banner__slider-contentLink button button--primary">Читать подробнее</a>
+                    </div>
+                    <div class="banner__slider-preview">
+                        <img loading="lazy" src="https://lipsum.app/640x480/" alt="" class="banner__slider-previewImg">
+                    </div>
+                </div>
+            </div>
+            <ul class="banner__slider-buttons">
+                <li class="banner__slider-buttonsItem">
+                    <button class="banner__slider-buttonsTarget banner__slider-buttonsTarget--prev">
+                        <i class="ri-arrow-left-line"></i>
+                    </button>
+                </li>
+                <li class="banner__slider-buttonsItem">
+                    <button class="banner__slider-buttonsTarget banner__slider-buttonsTarget--next">
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="main__section about" id="about">
+    <div class="about__head-section head-section">
+        <div class="container head-section__container">
+            <div class="head-section__content">
+                <h2 class="head-section__content-title section-title">О нас</h2>
+                <p class="head-section__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quo esse rerum amet inventore mollitia nulla enim, perspiciatis soluta quasi voluptate quas, tenetur repudiandae.</p>
+            </div>
+        </div>
+    </div>
+    <div class="about__wrapper">
+        <div class="container about__container">
+            <ul class="about__gallery">
+                <li class="about__gallery-item">
+                    <a data-fslightbox href="https://lipsum.app/640x480/" class="about__gallery-itemLink">
+                        <img loading="lazy" src="https://lipsum.app/640x480/" alt="Lorem ipsum dolor" class="about__gallery-itemImg">
+                    </a>
+                </li>
+                <li class="about__gallery-item">
+                    <a data-fslightbox href="https://lipsum.app/640x480/" class="about__gallery-itemLink">
+                        <img loading="lazy" src="https://lipsum.app/640x480/" alt="Lorem ipsum dolor" class="about__gallery-itemImg">
+                    </a>
+                </li>
+                <li class="about__gallery-item">
+                    <a data-fslightbox href="https://lipsum.app/640x480/" class="about__gallery-itemLink">
+                        <img loading="lazy" src="https://lipsum.app/640x480/" alt="Lorem ipsum dolor" class="about__gallery-itemImg">
+                    </a>
+                </li>                <li class="about__gallery-item">
+                    <a data-fslightbox href="https://lipsum.app/640x480/" class="about__gallery-itemLink">
+                        <img loading="lazy" src="https://lipsum.app/640x480/" alt="Lorem ipsum dolor" class="about__gallery-itemImg">
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="main__section news" id="news">
+    <div class="container news__container">
+        <div class="news__wrapper">
+            <h2 class="news__section-title section-title">Важные новости</h2>
+            <div class="news__section-content">
+                <ul class="news__list">
+                    <li class="news__item">
+                        <article class="news__card">
+                            <div class="news__card-info">
+                                <span class="news__card-infoCategory">Важное</span>
+                                <div class="news__card-infoDetail">
+                                    <div class="news__card-infoContent">
+                                        <a href="#!" class="news__card-infoMoreLink">
+                                            <h3 class="news__card-infoName">Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                                        </a>
+                                        <div class="news__card-infoDate">
+                                            <i class="ri-calendar-line"></i>
+                                            <span class="news__card-infoDateText">12.05.2024</span>
+                                        </div>
+                                    </div>
+                                    <a href="#!" class="news__card-infoMoreIcon">
+                                        <i class="ri-arrow-right-s-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <img loading="lazy" src="https://lipsum.app/640x480/" alt="" class="news__card-img">
+                        </article>
+                    </li>
+                    <li class="news__item">
+                        <article class="news__card">
+                            <div class="news__card-info">
+                                <span class="news__card-infoCategory">Важное</span>
+                                <div class="news__card-infoDetail">
+                                    <div class="news__card-infoContent">
+                                        <a href="#!" class="news__card-infoMoreLink">
+                                            <h3 class="news__card-infoName">Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                                        </a>
+                                        <div class="news__card-infoDate">
+                                            <i class="ri-calendar-line"></i>
+                                            <span class="news__card-infoDateText">12.05.2024</span>
+                                        </div>
+                                    </div>
+                                    <a href="#!" class="news__card-infoMoreIcon">
+                                        <i class="ri-arrow-right-s-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <img loading="lazy" src="https://lipsum.app/640x480/" alt="" class="news__card-img">
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pets-section" id="pets">
+    <div class="container pets-section__container">
+        <div class="pets-section__rowContent">
+            <div class="pets-section__head">
+                <h2 class="pets-section__title">Им нужна помощь</h2>
+                <p class="pets-section__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus dicta, blanditiis dolorum veniam eveniet a libero nulla magni!</p>
+            </div>
+            <div class="pets-section__context">
+                {% if pets %}
+                <ul class="pets-section__list">
+                    {% for pet in pets %}
+                    <li class="pets-section__item">
+                        <div data-pet-tag="#{{ pet.category.name }}" class="pets-section__card pet-card">
+                            <div class="pet-card__wrapper">
+                                <div class="pet-card__preview">
+                                    <img loading="lazy" src="{{ pet.images.all.0.image.url }}" alt="{{ pet.breed.name }} {{ pet.name }}" class="pet-card__preview-img pet-card__preview-img--primary">
+                                    <img loading="lazy" src="{{ pet.images.all.1.image.url }}" alt="{{ pet.breed.name }} {{ pet.name }}" class="pet-card__preview-img pet-card__preview-img--secondary">
+                                </div>
+                                <div class="pet-card__content">
+                                    <div class="pet-card__detail">
+                                        <h3 class="pet-card__name"><a aria-label="Перейти на страницу" href="{% url 'pet:page_detail' pet.slug %}" class="pet-card__link">{{ pet.name }}</a></h3>
+                                        <ul class="pet-card__info">
+                                            <li class="pet-card__info-item">
+                                                <div class="pet-card__info-value">{{ pet.breed.name }}</div>
+                                            </li>
+                                            <li class="pet-card__info-item">
+                                                <div class="pet-card__info-value">{{ pet.age }}</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p class="pets-section__alert alert-text">Этот раздел редактируется, приносим свои извинения!</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+<section class="reference-section" id="reference-section">
+    <div class="container reference-section__container">
+        <div class="reference-section__rowContent">
+            <div class="reference-section__head">
+                <h2 class="reference-section__title">Справочная информация</h2>
+                <p class="reference-section__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit mollitia est laudantium molestias cumque officiis cum quae voluptatibus nesciunt quidem praesentium aspernatur minima facilis exercitationem, amet optio veniam nemo corrupti ab totam.</p>
+            </div>
+            <div class="reference-section__context">
+                {% if references %}
+                <ul class="reference-section__list">
+                    {% for reference in references %}
+                    <li class="reference-section__list-item">
+                        <div class="reference-section__list-card reference-card">
+                            <div class="reference-card__wrapper">
+                                <a href="{% url 'reference:page_detail' reference.slug %}" class="reference-card__linkTitle">
+                                    <h3 class="reference-card__name">{{ reference.title }}</h3>
+                                </a>
+                                <p class="reference-card__text">{{ reference.small_text|slice:":120" }}...</p>
+                                <a aria-label="Перейти на страницу" href="{% url 'reference:page_detail' reference.slug %}" class="reference-card__link-detail">Подробнее</a>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p class="reference-section__alert alert-text">Этот раздел редактируется, приносим свои извинения!</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+<section class="requisites-section" id="requisites">
+    <div class="container requisites-section__container">
+        <div class="requisites-section__rowContent">
+            <div class="requisites-section__head">
+                <h2 class="requisites-section__title">Реквизиты для материальной помощи</h2>
+                <p class="requisites-section__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            </div>
+            <div class="requisites-section__context">
+                {% if cashs %} 
+                <ul class="requisites-section__list">
+                  {% for cash in cashs %}
+                  <li class="requisites-section__list-item">
+                    <div class="requisites-section__list-card requisites-card">
+                      <div class="requisites-card__wrapper">
+                        <h3 class="requisites-card__bankName">{{ cash.bank }}</h3>
+                        <div class="requisites-card__bankCode">
+                          <div aria-label="Код карты" class="requisites-card__bankCode-text" data-target-copy>{{ cash.number }}</div>
+                          <button data-tooltip="Скопировано" aria-label="Копировать код карты" class="requisites-card__bankCode-copy" data-control-copy>
+                            <i class="ri-file-copy-line"></i>
+                          </button>
+                        </div>
+                        <div class="requisites-card__holder">{{ cash.owner }}</div>
+                      </div>
+                    </div>
+                  </li>
+                  {% endfor %} 
+                </ul>
+                {% else %}
+                    <p class="requisites-section__alert alert-text">Этот раздел редактируется, приносим свои извинения!</p>
+                {% endif %}
+              </div>
+        </div>
+    </div>
+</section>
+<section class="help-section" id="help-section" style="background-image: url({% static 'img/bg-secondary.webp' %});">
+    <div class="container help-section__container">
+        <div class="help-section__rowContent">
+            <div class="help-section__rowHead">
+                <h2 class="help-section__title">Хотите помочь, но не знаете как?</h2>
+                <p class="help-section__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque aut quos, consequatur voluptas tempora repudiandae.</p>
+            </div>
+            <div class="help-section__rowContext">
+                <button aria-label="Открыть модальное окно" class="help-section__btnModal button button--primary" data-toggler-modal>Оставить заявку</button>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

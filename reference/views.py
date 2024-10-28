@@ -5,7 +5,7 @@ def reference_list(request):
     references = Reference.objects.filter(is_active=True)
     return render(request, "reference/page-index.html", {
         'references': references,
-        'title': 'Справочники',
+        'title': 'Справочник',
     })
 
 def reference_detail(request, slug):

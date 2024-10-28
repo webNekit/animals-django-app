@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Pet
 
 def pets_list(request):
-    pets = Pet.objects.filter(is_active=True).prefetch_related('images')
+    pets = Pet.objects.filter(is_active=True).order_by("-created_at").prefetch_related('images')
     return render(request, "pet/page-index.html", {
         "title": "Питомцы",
         "meta_text": "Список питомцев",
