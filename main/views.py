@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.conf import settings
+from django.http import JsonResponse
+from .utils import send_message_to_telegram
 from reference.models import Reference
 from cash.models import Cash
 from pet.models import Pet
@@ -26,3 +29,19 @@ def index(request):
         'meta_keywords': 'питомцы, помощь питомцам'
     })
 
+
+def submit_application(request):
+    if request.method == 'POST':
+        first_name = request.POST.get('first-name')
+        last_name = request.POST.get('last-name')
+        phone = request.POST.get('phone')
+        email = request.POST.get('email')
+
+        # Создаем сообщение для Telegram
+        message = f"Новая заявка:\nИмя: {first_name}\nФамилия: {last_name}\nТелефон: {phone}\nEmail: {email}"
+
+        # Отправляем сообщение в Telegram
+        send_message_to_telegram(message)
+        return JsonResponse({'success': True})
+
+    return JsonResponse({'success': False})

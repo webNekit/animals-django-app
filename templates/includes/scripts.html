@@ -1,3 +1,27 @@
 {% load static %}
 <script src="{% static 'js/index.bundle.js' %}"></script>
 <script src="{% static 'js/formatter-bank.js' %}"></script>
+<script src="https://unpkg.com/htmx.org@1.9.3"></script>
+<script>
+    document.addEventListener('htmx:afterRequest', function(event) {
+        // Проверяем, если запрос успешный
+        if (event.detail.xhr.response) {
+            const response = JSON.parse(event.detail.xhr.response);
+            if (response.success) {
+                const alertBox = document.querySelector('.alert-submit');
+                alertBox.classList.add('alert-submit--active'); // Добавляем класс активного состояния
+
+                // Показываем сообщение
+                alertBox.style.visibility = 'visible';
+                alertBox.style.opacity = '1';
+
+                // Удаляем класс через 5 секунд
+                setTimeout(() => {
+                    alertBox.classList.remove('alert-submit--active');
+                    alertBox.style.visibility = 'hidden'; // Скрываем сообщение
+                    alertBox.style.opacity = '0'; // Скрываем сообщение
+                }, 5000);
+            }
+        }
+    });
+</script>

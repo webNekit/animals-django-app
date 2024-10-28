@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -12,13 +13,12 @@
     <meta name="theme-color" content="#317EFB" />
     <meta property="og:title" content="Заголовок страницы" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://example.com/page.html" />
-    <meta property="og:image" content="https://example.com/image.jpg" />
-    <meta property="og:description" content="Описание страницы, которое будет отображаться в социальных сетях." />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Заголовок страницы" />
-    <meta name="twitter:description" content="Описание страницы" />
-    <meta name="twitter:image" content="https://example.com/image.jpg" />
+    <meta property="og:image" content="{% static 'img/pattern.jpg' %}" />
+    <meta property="og:description" content="Помощь животным" />
+    <meta name="twitter:card" content="{% static 'img/pattern.jpg' %}" />
+    <meta name="twitter:title" content="Помощь животным" />
+    <meta name="twitter:description" content="Давайте поможем им вместе!" />
+    <meta name="twitter:image" content="{% static 'img/pattern.jpg' %}" />
     <meta name="language" content="ru" />
     <meta name="robots" content="index, nofollow" />
     {% include "includes/styles.html" %}

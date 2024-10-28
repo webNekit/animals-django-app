@@ -12,7 +12,8 @@
                 <div class="help-modal__content">
                     <h3 class="help-modal__content-title">Оставьте заявку и&#160;мы&#160;свяжемся с&#160;вами
                     </h3>
-                    <form action="#" class="help-modal__form" method="post">
+                    <form action="{% url 'main:submit_application' %}" method="post" class="help-modal__form" hx-post="{% url 'main:submit_application' %}" hx-target="#response" hx-swap="innerHTML">
+                        {% csrf_token %}
                         <div class="help-modal__form-group">
                             <div class="help-modal__form-item">
                                 <label for="first-name" class="help-modal__form-label">Ваше имя</label>
@@ -46,6 +47,8 @@
                             </div>
                         </div>
                     </form>
+                    <div id="response" style="display:none;"></div> <!-- Этот div может оставаться пустым -->
+                    <div class="alert-submit">Ваша заявка успешно отправлена</div>
                 </div>
             </div>
         </div>
