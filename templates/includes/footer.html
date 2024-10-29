@@ -15,28 +15,28 @@
 						<div class="footer__navbar-title">Навигация</div>
 						<menu class="footer__navbar-menu">
 							<li class="footer__navbar-item">
-								<a aria-label="Перейти на страницу" href="#!" class="footer__navbar-link">Главная</a>
+								<a aria-label="Перейти на страницу" href="{% url 'main:index' %}" class="footer__navbar-link">Главная</a>
 							</li>
 							<li class="footer__navbar-item">
-								<a aria-label="Перейти на страницу" href="#!" class="footer__navbar-link">О нас</a>
+								<a aria-label="Перейти на страницу" href="{% url 'about:about' %}" class="footer__navbar-link">О нас</a>
 							</li>
 							<li class="footer__navbar-item">
-								<a aria-label="Перейти на страницу" href="#!" class="footer__navbar-link">Питомцы</a>
+								<a aria-label="Перейти на страницу" href="{% url 'pet:pets_list' %}" class="footer__navbar-link">Питомцы</a>
 							</li>
 							<li class="footer__navbar-item">
-								<a aria-label="Перейти на страницу" href="#!" class="footer__navbar-link">Реквизиты</a>
+								<a aria-label="Перейти на страницу" href="{% url 'cash:cash_list' %}" class="footer__navbar-link">Реквизиты</a>
 							</li>
 							<li class="footer__navbar-item">
-								<a aria-label="Перейти на страницу" href="#!" class="footer__navbar-link">Отчеты</a>
+								<a aria-label="Перейти на страницу" href="{% url 'report:report_list' %}" class="footer__navbar-link">Отчеты</a>
 							</li>
 							<li class="footer__navbar-item">
-								<a aria-label="Перейти на страницу" href="#!" class="footer__navbar-link">Справочник</a>
+								<a aria-label="Перейти на страницу" href="{% url 'reference:reference_list' %}"" class="footer__navbar-link">Справочник</a>
 							</li>
 							<li class="footer__navbar-item">
-								<a aria-label="Перейти на страницу" href="#!" class="footer__navbar-link">Новости</a>
+								<a aria-label="Перейти на страницу" href="{% url 'article:article_list' %}" class="footer__navbar-link">Новости</a>
 							</li>
 							<li class="footer__navbar-item">
-								<a aria-label="Перейти на страницу" href="#!" class="footer__navbar-link">Контакты</a>
+								<a aria-label="Перейти на страницу" href="{% url 'main:contacts' %}" class="footer__navbar-link">Контакты</a>
 							</li>
 						</menu>
 					</nav>
@@ -62,7 +62,7 @@
 				<div class="footer__copyright">
 					&copy; {{ site_settings.site_name }} 2024
 				</div>
-				<a href="#!" aria-label="Ссылка на разработчика" target="_blank" class="footer__development-link">Дизайн и разработка сайта</a>
+				<a href="https://t.me/nekitmochalov007" aria-label="Ссылка на разработчика" target="_blank" class="footer__development-link">Дизайн и разработка сайта</a>
 			</div>
 		</div>
 	</div>
