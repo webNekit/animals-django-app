@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'report.apps.ReportConfig',
     'cash.apps.CashConfig',
     'settings.apps.SettingsConfig',
+    'about.apps.AboutConfig',
 ]
 
 MIDDLEWARE = [

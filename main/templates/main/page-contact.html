@@ -1,0 +1,45 @@
+{% extends "base.html" %} {% load static %}
+{% block title %}{{ title }}{% endblock %} 
+{%block meta_title %}{{ title }}{% endblock meta_title %}
+{% block meta_text %}{{ meta_text }}{% endblock meta_text %}
+{% block meta_keywords %}{{ meta_keywords }}{% endblock meta_keywords %}
+{% block content %} 
+{% include "components/header-page.html" with title=title %}
+<section class="contacts-section" id="contacts-section">
+    <div class="container contacts-section__container">
+        <div class="contacts-section__row contacts-section__row--content">
+            <div class="contacts-section__row contacts-section__row--phones">
+                <h2 class="contacts-section__title">Телефоны</h2>
+                <ul aria-label="Список телефонов" class="contacts-section__list">
+                    <li class="contacts-section__item"><a data-phone-number="{{ site_settings.main_phone }}" aria-label="Позвонить по телефону" href="tel:+{{ site_settings.main_phone }}" class="contacts-section__link"></a></li>
+                    {% for phone in site_settings.additional_phones.all %}
+                    <li class="contacts-section__item"><a data-phone-number="{{ phone.phone }}" aria-label="Позвонить по телефону" href="tel:+{{ phone.phone }}" class="contacts-section__link"></a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% if site_settings.social_links %}
+            <div class="contacts-section__row contacts-section__row--messangers">
+                <h2 class="contacts-section__title">Мессенджеры</h2>
+                <ul aria-label="Список мессенджеров" class="contacts-section__list">
+                    {% for social in site_settings.social_links.all %}
+                    <li class="contacts-section__item"><a target="_blank" aria-label="Перейти в мессенджер" href="{{ social.url }}" class="contacts-section__link">
+                        <img class="footer__messanger-logo" src="{{ social.icon.url }}" />
+                    </a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+            {% if site_settings.additional_emails %}
+            <div class="contacts-section__row contacts-section__row--emails">
+                <h2 class="contacts-section__title">Эл.почта</h2>
+                <ul aria-label="Список мессенджеров" class="contacts-section__list">
+                    {% for email in site_settings.additional_emails.all %}
+                    <li class="contacts-section__item"><a aria-label="Написать на почту" href="mailto:{{ email.email }}" class="contacts-section__link">{{ email.email }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

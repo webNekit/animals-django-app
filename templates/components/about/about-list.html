@@ -1,0 +1,15 @@
+{% if galleries %}
+<div class="about__wrapper">
+    <div class="container about__container">
+        <ul class="about__gallery">
+            {% for gallery in galleries %}
+            <li class="about__gallery-item">
+                <a data-fslightbox href="{{ gallery.image.url }}" class="about__gallery-itemLink">
+                    <img loading="lazy" src="{{ gallery.image.url }}" alt=" class="about__gallery-itemImg">
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endif %}

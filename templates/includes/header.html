@@ -24,13 +24,13 @@
         <div class="header__row header__row--bottom">
             <nav class="header__navbar navbar" id="navbar-top">
                 <menu class="navbar__menu">
-                    <li class="navbar__menu-item"><a aria-selected="Ссылка на страницу о нас" href="./about.html" class="navbar__menu-link">О нас</a></li>
+                    <li class="navbar__menu-item"><a aria-selected="Ссылка на страницу о нас" href="{% url 'about:about' %}" class="navbar__menu-link">О нас</a></li>
                     <li class="navbar__menu-item"><a aria-selected="Ссылка на страницу питомцы" href="{% url 'pet:pets_list' %}" class="navbar__menu-link">Питомцы</a></li>
                     <li class="navbar__menu-item"><a aria-selected="Ссылка на страницу реквизиты" href="{% url 'cash:cash_list' %}" class="navbar__menu-link">Реквизиты</a></li>
                     <li class="navbar__menu-item"><a aria-selected="Ссылка на страницу отчеты" href="{% url 'report:report_list' %}" class="navbar__menu-link">Отчеты</a></li>
                     <li class="navbar__menu-item"><a aria-selected="Ссылка на страницу справочник" href="{% url 'reference:reference_list' %}" class="navbar__menu-link">Справочник</a></li>
                     <li class="navbar__menu-item"><a aria-selected="Ссылка на страницу новости" href="{% url 'article:article_list' %}" class="navbar__menu-link">Новости</a></li>
-                    <li class="navbar__menu-item"><a aria-selected="Ссылка на страницу контакты" href="./contacts.html" class="navbar__menu-link">Контакты</a></li>
+                    <li class="navbar__menu-item"><a aria-selected="Ссылка на страницу контакты" href="{% url 'main:contacts' %}" class="navbar__menu-link">Контакты</a></li>
                 </menu>
             </nav>
             <button class="header__menu-btn" id="menu-btn">

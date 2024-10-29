@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% load static %}
+{% block title %}{{ title }}{% endblock %} 
+{%block meta_title %}{{ title }}{% endblock meta_title %}
+{% block meta_text %}{{ meta_text }}{% endblock meta_text %}
+{% block meta_keywords %}{{ meta_keywords }}{% endblock meta_keywords %}
+{% block content %} 
+{% include "components/header-page.html" with title=title %}
+<section class="main__section about" id="about">
+    <div class="about__head-section head-section">
+        <div class="container head-section__container">
+            <div class="head-section__content">
+                <p class="head-section__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quo esse rerum amet inventore mollitia nulla enim, perspiciatis soluta quasi voluptate quas, tenetur repudiandae.</p>
+            </div>
+        </div>
+    </div>
+    {% include "components/about/about-list.html" with galleries=galleries %}
+</section>
+{% endblock %}

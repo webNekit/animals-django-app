@@ -77,32 +77,7 @@
             </div>
         </div>
     </div>
-    <div class="about__wrapper">
-        <div class="container about__container">
-            <ul class="about__gallery">
-                <li class="about__gallery-item">
-                    <a data-fslightbox href="https://lipsum.app/640x480/" class="about__gallery-itemLink">
-                        <img loading="lazy" src="https://lipsum.app/640x480/" alt="Lorem ipsum dolor" class="about__gallery-itemImg">
-                    </a>
-                </li>
-                <li class="about__gallery-item">
-                    <a data-fslightbox href="https://lipsum.app/640x480/" class="about__gallery-itemLink">
-                        <img loading="lazy" src="https://lipsum.app/640x480/" alt="Lorem ipsum dolor" class="about__gallery-itemImg">
-                    </a>
-                </li>
-                <li class="about__gallery-item">
-                    <a data-fslightbox href="https://lipsum.app/640x480/" class="about__gallery-itemLink">
-                        <img loading="lazy" src="https://lipsum.app/640x480/" alt="Lorem ipsum dolor" class="about__gallery-itemImg">
-                    </a>
-                </li>                <li class="about__gallery-item">
-                    <a data-fslightbox href="https://lipsum.app/640x480/" class="about__gallery-itemLink">
-                        <img loading="lazy" src="https://lipsum.app/640x480/" alt="Lorem ipsum dolor" class="about__gallery-itemImg">
-                    </a>
-                </li>
-
-            </ul>
-        </div>
-    </div>
+    {% include "components/about/about-list.html" with galleries=galleries %}
 </section>
 <section class="main__section news" id="news">
     <div class="container news__container">
