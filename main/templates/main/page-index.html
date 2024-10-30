@@ -8,7 +8,7 @@
     <div class="container banner__container">
         <div class="banner__slider swiper">
             <div class="banner__slider-wrapper swiper-wrapper">
-                {% if petsBanner %}
+                {% if petsBanner and petsBanner.exists %}
                     {% for petBanner in petsBanner %}
                     <div class="banner__slider-slide swiper-slide">
                         <div class="banner__slider-content">
@@ -22,7 +22,7 @@
                     </div>
                     {% endfor %}
                 {% endif %}
-                {% if referencesBanner %}
+                {% if referencesBanner and referencesBanner.exists %}
                     {% for referenceBanner in referencesBanner %}
                     <div class="banner__slider-slide swiper-slide">
                         <div class="banner__slider-content">
@@ -37,7 +37,7 @@
                     </div>
                     {% endfor %}
                 {% endif %}
-                {% if referencesBanner %}
+                {% if articlesBanner and articlesBanner.exists %}
                 {% for articleBanner in articlesBanner %}
                 <div class="banner__slider-slide swiper-slide">
                     <div class="banner__slider-content">
@@ -95,7 +95,7 @@
                 <p class="pets-section__description">Этот раздел посвящен питомцам, которым требуется ваша помощь и забота. Здесь вы найдете истории животных, оказавшихся в сложной ситуации, а также информацию о том, как вы можете помочь каждому из них: от временной опеки до пожертвований или поиска постоянного дома. Присоединяйтесь к спасению жизней и дарите шанс на лучшее будущее нашим четвероногим друзьям.</p>
             </div>
             <div class="pets-section__context">
-                {% if pets %}
+                {% if pets and pets.exists %}
                 <ul class="pets-section__list">
                     {% for pet in pets %}
                     <li class="pets-section__item">
@@ -138,7 +138,7 @@
                 <p class="reference-section__text">Здесь вы найдете полезные советы и рекомендации по уходу за животными, правовой информации о защите животных, а также о том, как правильно помочь питомцам в разных ситуациях. Мы собрали актуальную и проверенную информацию, чтобы вы могли оказывать поддержку животным с заботой и знанием дела.</p>
             </div>
             <div class="reference-section__context">
-                {% if references %}
+                {% if references and references.exists %}
                 <ul class="reference-section__list">
                     {% for reference in references %}
                     <li class="reference-section__list-item">
@@ -169,7 +169,7 @@
                 <p class="requisites-section__text">Все собранные средства идут на еду, лечение, временное содержание и поиск дома для питомцев. Даже небольшая помощь может сделать многое — присоединяйтесь и помогите нам подарить животным шанс на лучшую жизнь.</p>
             </div>
             <div class="requisites-section__context">
-                {% if cashs %} 
+                {% if cashs and cashs.exists %} 
                 <ul class="requisites-section__list">
                   {% for cash in cashs %}
                   <li class="requisites-section__list-item">
