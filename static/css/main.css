@@ -764,6 +764,26 @@ html, body {
   padding-bottom: 24px;
   border-bottom: 1px solid var(--color-border-secondary);
 }
+
+@media (max-width: 576px) {
+  .header__row--top {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 8px;
+  }
+  .header__col--left {
+
+  }
+  .header__col--center {}
+  .header__col--right {
+    grid-column: 2 span;
+  }
+  .header__col--right button {
+    width: 100%;
+  }
+}
+
+
 .header__col {
   width: 100%;
 }
@@ -955,6 +975,7 @@ html, body {
 }
 @media (max-width: 576px) {
   .help-modal__form-input {
+    height: 45px;
     padding: 8px 8px;
   }
 }
